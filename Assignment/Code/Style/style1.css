@@ -14,44 +14,51 @@ footer ul{
 }
 
 *{
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 body{
-    height: 100vh;
-    background: #000000;
+    background:#02074d;
 }
 
 .container{
-    margin: 30px;
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 20px #BE0000;
 }
 
-.row{
+img{
+    height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
 
-.image{
-    background: #ff0000;
-    position: relative;
-    flex: 1;
-    max-width: 460px;
-    height: 300px;
-    margin: 20px;
+.overly{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transform: opacity 0.4s ease-in-out;
+    background:#BE0000;
+    cursor: pointer;
 }
 
-.image img{
+.content{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.container:hover .overlay{
     opacity: 0.8;
-    position: relative;
-    vertical-align: top;
-    transition: 0.6;
-    transition-property: opacity;
-}
-
-.image:hover img{
-    opacity:1;
 }
